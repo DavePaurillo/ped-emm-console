@@ -9,6 +9,9 @@ export const env = createEnv({
   server: {
     DATABASE_URL: z.string().url(),
     NODE_ENV: z.enum(["development", "test", "production"]),
+    AMAPI_SA_PROJECT_ID: z.string(),
+    AMAPI_SA_PK: z.string(),
+    AMAPI_SA_CLIENT_EMAIL: z.string(),
   },
 
   /**
@@ -27,6 +30,9 @@ export const env = createEnv({
   runtimeEnv: {
     DATABASE_URL: process.env.DATABASE_URL,
     NODE_ENV: process.env.NODE_ENV,
+    AMAPI_SA_PROJECT_ID: process.env.AMAPI_SA_PROJECT_ID,
+    AMAPI_SA_PK: process.env.AMAPI_SA_PK,
+    AMAPI_SA_CLIENT_EMAIL: process.env.AMAPI_SA_CLIENT_EMAIL,
     // NEXT_PUBLIC_CLIENTVAR: process.env.NEXT_PUBLIC_CLIENTVAR,
   },
 });
